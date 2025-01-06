@@ -1,22 +1,19 @@
-import { useState } from "react";
-import "./App.css"
-const App = () =>{
-  const [count, setCount] = useState(0);
-  const incrementa = () => {setCount(count +1)};
-  const decrementa = () => {setCount(count - 1)};
-  const resetear = () => {setCount(0)};
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import NotFound from './pages/NotFound';
+
+
+const  App = () =>{
   return (
-    <div className="container">
-      <h1>Counter : {count}</h1>
-      <hr></hr>
-      <button onClick={incrementa}>+</button>
-      <button onClick={resetear}>Reset</button>
-      <button onClick={decrementa}>-</button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element= {<Login></Login>}></Route>
+        <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
-
-
