@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchIncidents, createIncident, updateIncident, deleteIncident } from "../services/incident";
 import IncidentTable from "../components/IncidentTable";
-import IncidentForm from "../components/IncidentForm";
+import IncidForm from "../components/IncidForm";
 
 const Incident = () => {
   const [incidents, setIncidents] = useState([]);
@@ -34,7 +34,7 @@ const Incident = () => {
   return (
     <div>
       <h1>Gestión de Incidentes</h1>
-      <IncidentForm
+      <IncidForm
         onSubmit={handleCreateOrUpdate}
         initialData={editingIncident}
       />
