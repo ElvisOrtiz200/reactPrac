@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchIncidents, createIncident, updateIncident, deleteIncident } from "../services/incident";
 import IncidentTable from "../components/IncidentTable";
-import IncidentForm from "../components/incidentForm";
+import IncidentForm from "../components/IncidentForm";
 
 const Incident = () => {
   const [incidents, setIncidents] = useState([]);
