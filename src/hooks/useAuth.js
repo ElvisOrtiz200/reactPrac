@@ -17,6 +17,8 @@ const useAuth = () =>{
             console.log(data);  
             setUser(data.user);
             localStorage.setItem("token", data.token);
+            console.log(data.usuario.username)
+            localStorage.setItem("username", data.usuario.username);
             setError(null);
             navigate("/dashboard"); // Redirige solo si los datos son válidos
           } else {
@@ -26,7 +28,6 @@ const useAuth = () =>{
           setError(err.message || "Error al iniciar sesión");
         }
       };
-      
 
     const handleRegister = async (credentials)=>{
         try {
@@ -39,9 +40,12 @@ const useAuth = () =>{
     }
 
     const logout = () => {
-        setUser(null);
-        localStorage.removeItem("token"); // Elimina el token
-    };
+      localStorage.removeItem("token");
+      localStorage.removeItem("username1");
+
+      navigate("/"); 
+  };
+
 
     return { user, error, handleLogin, handleRegister, logout };
 }

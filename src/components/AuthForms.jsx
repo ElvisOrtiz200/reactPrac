@@ -12,7 +12,7 @@ const AuthForm = ({ onSubmit, fields, buttonText, error }) => {
   };
 
   const handleSubmit = async (e) => {
-    console.log("hola");
+    console.log(formData);
     e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
     if (onSubmit) {
         await onSubmit(formData); // Llama a la función pasada como prop

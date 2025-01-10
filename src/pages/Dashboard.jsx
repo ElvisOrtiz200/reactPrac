@@ -16,7 +16,7 @@ const Dashboard = () =>{
                 <Nav />
             </div> 
 
-            <div className="flex-1 p-6">
+            <div className="flex-1 pt-10 px-4">
         <Routes>
           <Route path="/" element={<h1 className="text-2xl font-bold">Bienvenido al Dashboard</h1>} />
           <Route path="incidents" element={<Inicidents/>} />
