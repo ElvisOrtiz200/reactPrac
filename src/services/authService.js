@@ -6,7 +6,7 @@ import axios from 'axios';
 /**https://nodeprac-s89d.onrender.com 
  * http://localhost:3000
 */
-const API_URL = 'http://localhost:3000/api/auth';
+const API_URL = 'https://nodeprac-s89d.onrender.com/api/auth';
 
 export const login = async (credentials) => {
   const response = await fetch(`${API_URL}/login`, {

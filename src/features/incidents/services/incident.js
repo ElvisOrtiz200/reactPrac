@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Crear la instancia de axios con la URL base
 const api = axios.create({
-  baseURL: "http://localhost:3000/api", // URL base del backend
+  baseURL: "https://nodeprac-s89d.onrender.com/api", // URL base del backend
 });
 
 // Agregar el interceptor para insertar el token en los encabezados
